@@ -1,0 +1,38 @@
+.a-table {
+  background-color: #fff;
+  &-head,
+  &-row {
+    position: relative;
+    border-bottom: 1px solid rgb(226, 223, 223);
+    display: flex;
+    align-items: center;
+    > a,
+    > span {
+      padding: 16px;
+    }
+  }
+  &-head {
+    font-weight: 600;
+    color: #212529;
+  }
+  &-row {
+    text-decoration: none;
+    color: #212529;
+  }
+  &-row:hover {
+    background-color: #f3f2f2;
+    box-shadow: 0 0 5px 0 rgba(43, 43, 43, 0.1);
+  }
+  &-content {
+    position: relative;
+    min-height: 250px;
+  }
+}
+
+.scroll-height{
+  .a-table-content {
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

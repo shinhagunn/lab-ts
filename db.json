@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn Hoàng",
+      "birthday": "27/12/2002",
+      "phone": "0386498785",
+      "gender": "Nam",
+      "address": "51 Nguyễn Hoàng, Hà Nội",
+      "email": "shinhagunn@gmail.com",
+      "facebook": "https://fb.com/chiyeunhimthoi",
+      "job": "Fullstack web developer",
+      "avatar": "https://thuthuatnhanh.com/wp-content/uploads/2021/02/Anh-avatar-bua-cute-dep-390x390.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "name": "Đọc sách"
+        },
+        {
+          "id": 2,
+          "name": "Chơi cờ"
+        },
+        {
+          "id": 3,
+          "name": "Đi bộ"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "HTML/CSS",
+      "score": 80,
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Javascript",
+      "score": 60,
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "React",
+      "score": 30,
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Go",
+      "score": 40,
+      "image": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website bán hàng",
+      "start_time": "15/03/2022",
+      "end_time": "05/04/2022",
+      "descriptions": [
+        {
+          "id": 1,
+          "name": "Website bán hàng có các chức năng cơ bản như slide, hiển thị, đăng nhập, thêm vào giỏ hàng, order, và một vài phần thêm sửa xóa quản trị."
+        },
+        {
+          "id": 2,
+          "name": "Thêm các phần nâng cao như gửi email, chat sử dụng websocket, thiết kế app theo mô hình microservice."
+        }
+      ]
+    }
+  ],
+  "schools": [
+    {
+      "id": 1,
+      "name": "THPT Nguyễn Trãi",
+      "start_time": "09/09/2018",
+      "end_time": "05/05/2020",
+      "achievements": [
+        {
+          "id": 1,
+          "name": "Giải thưởng xếp hạng",
+          "description": "Giải thưởng xếp hạng"
+        },
+        {
+          "id": 2,
+          "name": "Giải thưởng xếp hạng",
+          "description": "Giải thưởng xếp hạng"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "year": "2020",
+      "name": "Bằng Giỏi THPT Nguyễn Trãi"
+    },
+    {
+      "id": 2,
+      "year": "2023",
+      "name": "Bằng ? Trường Cao đẳng FPT Polytechnic"
+    }
+  ]
+}

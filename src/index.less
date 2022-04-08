@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  position: relative;
+  width: 100%;
+  &.wide {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.col-3 {
+  width: calc(100% /3);
+}
+
+.col-0 {
+  flex: 1;
+}
+
+
+.border-color {
+  border: 1px solid #ccc;
+}
+
+.toast {
+  &-container {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    overflow: hidden;
+  }
+  
+  display: flex;
+  width: 340px;
+  border-radius: 5px;
+  margin-top: 12px;
+  padding: 8px;
+  animation: toast 0.4s linear 1 forwards;
+  transition: all 0.3s;
+  z-index: 999;
+
+  &-icon {
+    span {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &-hidden {
+    animation: toastRemove 0.4s linear 1 forwards;
+  }
+
+  &-text {
+    padding-left: 16px;
+    flex: 1;
+
+    &-title {
+      font-weight: bold;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    &-mess {
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+
+  &-close {
+    color: #fff; 
+
+    button {
+      font-size: 16px;
+    }
+  }
+
+  &-success {
+    background-color: #44D788;
+
+    .toast-icon {
+      color: #44D788;
+    }
+  }
+
+  &-error {
+    background-color: #FA461C;
+
+    .toast-icon {
+      color: #FA461C;
+    }
+  }
+}
+
+@keyframes toast {
+  from {
+    opacity: 0;
+    transform: translateX(340px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toastRemove {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(340px);
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #C8996E;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #C8996E transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

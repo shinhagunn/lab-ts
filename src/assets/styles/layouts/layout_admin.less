@@ -1,0 +1,119 @@
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+.admin-container{
+    position: relative;
+    overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  .menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 15%;
+      background-color: #263544;
+      color: rgb(119, 131, 147);
+      .menu-icon{
+          padding: 24px;
+          text-align: center;
+          color: white;
+      }
+      .logout{
+          cursor: pointer;
+          display: inline-block;
+          background-color: #263544;
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          border: none;
+          font-size: 16px;
+          text-decoration: none;
+          color: #b7c0cd;
+      }
+      .logout:hover{
+          color: #fff;
+      }
+      .menu-list {
+          list-style-type: none;
+          .item a{
+              display: block;
+              padding: 14px 0 14px 32px;
+              text-decoration: none;
+              color: #b7c0cd;
+
+              i {
+                width: 30px;
+              }
+          }
+          .item-selected a{
+              background-color: #1D2531;
+              border-left: 3px solid #007bff;
+          }
+          .item a:hover{
+              color: white;
+          }
+      }
+  }
+  .content{
+      float: right;
+      width: 85%;
+      .header-top{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 0 34px;
+          height: 73px;
+          background-color: white;
+          box-shadow: 0 0 5px 0 rgba(43, 43, 43, 0.15);
+          .filter{
+              font-size: 20px;
+          }
+          .filter:hover{
+              color:#007bff;
+              cursor: pointer;
+          }
+      }
+      .header-content{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 34px 34px;
+          .title{
+              display: flex;
+              align-items: center;
+              
+              .icon{
+                  margin-right: 16px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 40px;
+                  height: 40px;
+                  font-size: 18px;
+                  background-color: #4099ff;
+                  color: white;
+                  border-radius: 6px;
+                  box-shadow: 0 0 5px 0 rgba(43, 43, 43, 0.1);
+              }
+              .page-name h3{
+                  font-weight: normal;
+                  font-size: 18px;
+              }
+          }
+          .breadcrumb{
+              padding-right: 16px;
+              .bread-item{
+                  font-size: 14px;
+                  text-decoration: none;
+                  color: #1D2531;
+              }
+              .bread-item:hover{
+                  color: #4099ff;
+              }
+          }
+      }
+  }
+}
