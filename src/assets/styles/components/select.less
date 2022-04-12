@@ -1,0 +1,51 @@
+.select {
+  display: inline-block;
+  position: relative;
+
+  &-value {
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+
+  .option {
+    opacity: 0;
+    z-index: 99;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 4px 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.3s;
+
+    &-appear {
+      display: block;
+    }
+
+    &-effect {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+
+    &-hidden {
+      display: none;
+    }
+
+    div {
+      font-size: 16px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(238, 238, 238);
+      }
+    }
+  }
+}

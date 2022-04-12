@@ -1,0 +1,55 @@
+#imagePre{
+  display: block;
+  position: relative;
+  margin: 16px 0;
+  color: #000;
+  #preview{
+    display: block;
+    width: auto;
+    height: 200px;
+  }
+
+  #preview:hover{
+    background-color: black;
+  }
+  .overlay{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: rgba(43, 43, 43, 0.7);
+  }
+  .text{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+#imagePre:hover > .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#upFile{
+  display: none;
+}
+
+.input-change {
+  padding: 4px 4px 4px 0;
+  border:none;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.15);
+  font-size: 16px;
+  transition: all 0.3s;
+  &:focus, &:hover {
+    border-bottom: 1px solid #007bff;
+  }
+}

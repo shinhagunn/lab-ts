@@ -4,15 +4,17 @@ import BlockAdmin from '../../../components/BlockAdmin';
 import Table from '../../../components/Table';
 import { Align, Column } from '../../../types/index';
 import '../../../assets/styles/pages/admin/user/index.less';
+import usePublicStore from "../../../store/index"
 
 function UserAdminPage() {
 
+  const publicStore = usePublicStore();
+
+  useEffect(() => {
+    publicStore.fetchUsers();
+  }, [])
+
   const columns = [
-    {
-      key: 'uid',
-      title: 'UID',
-      align: Align.Left,
-    },
     {
       key: 'email',
       title: 'Email',
@@ -20,13 +22,13 @@ function UserAdminPage() {
       scopedSlots: true,
     },
     {
-      key: 'state',
-      title: 'State',
+      key: 'name',
+      title: 'Name',
       align: Align.Left,
     },
     {
-      key: 'role',
-      title: 'Role',
+      key: 'job',
+      title: 'Job',
       align: Align.Left,
     },
     {
@@ -48,7 +50,7 @@ function UserAdminPage() {
       <LayoutAdmin selected={2} pageName="Users">
         <div className="main">
           <BlockAdmin className="users" blockName="Table Users">
-            {/* <Table data={AdminStore.users} columns={columns} is_router_link router_builder="/dashboard/users" /> */}
+            <Table data={publicStore.users} columns={columns} is_router_link router_builder="/admin/user" />
           </BlockAdmin>
         </div>
       </LayoutAdmin>

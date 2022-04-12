@@ -34,5 +34,5 @@ export default function addToast(type: string, mess: string, id: string) {
     setTimeout(() => {
       toast.remove();
     }, 300);
-  }, 2000);
+  }, 3000);
 }

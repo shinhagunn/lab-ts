@@ -14,7 +14,7 @@ interface breadcrumb {
 }
 
 function LayoutAdmin(props: React.PropsWithChildren<LayoutAdminProps>) {
-  const menuLogoes = ['', 'fas fa-home', 'fas fa-user', 'fa-solid fa-list', 'fa-solid fa-vest-patches', 'fas fa-compact-disc', 'fa-solid fa-comment'];
+  const menuLogoes = ['', 'fas fa-home', 'fas fa-user', 'fa-solid fa-list', 'fa-solid fa-vest-patches', 'fa-solid fa-school', 'fa-solid fa-certificate'];
   const logoNow = menuLogoes[props.selected ?? 0];
 
   function getBreadcrumb() {
@@ -49,7 +49,7 @@ function LayoutAdmin(props: React.PropsWithChildren<LayoutAdminProps>) {
       } else {
         result[i] = {
           id: i,
-          name: 'admin / ',
+          name: 'Admin / ',
           url: tam[i],
         };
       }
@@ -88,8 +88,14 @@ function LayoutAdmin(props: React.PropsWithChildren<LayoutAdminProps>) {
           </li>
           <li className={`item ${props.selected === 5 ? 'item-selected' : ''}`}>
             <Link to="/admin/schools">
-              <i className="fa-solid fa-comment" />
+              <i className="fa-solid fa-school" />
               Schools
+            </Link>
+          </li>
+          <li className={`item ${props.selected === 6 ? 'item-selected' : ''}`}>
+            <Link to="/admin/certificates">
+              <i className="fa-solid fa-certificate"></i>
+              Certificates
             </Link>
           </li>
         </ul>

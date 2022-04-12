@@ -1,10 +1,11 @@
 export type Favorite = {
-  id: string;
+  id?: string;
   name: string;
+  created_at: string
 }
 
 export type User = {
-  id: string
+  id?: string
   name: string
   birthday: string
   phone: string
@@ -15,46 +16,58 @@ export type User = {
   job: string
   avatar: string
   favorites: Favorite[]
+  created_at: string
+  updated_at: string
 }
 
 export type Certificate = {
-  id: string
+  id?: string
   year: string
   name: string
+  created_at: string
+  updated_at: string
 }
 
 export type Skill = {
-  id: number
+  id?: number
   name: string
   score: number
   image: string
+  created_at: string
+  updated_at: string
 }
 
 export type Description = {
-  id: number
+  id?: number
   name: string
+  created_at: string
 }
 
 export type Project = {
-  id: number
+  id?: number
   name: string
   start_time: string
   end_time: string
   descriptions: Description[]
+  created_at: string
+  updated_at: string
 }
 
 export type Achievement = {
-  id: number
+  id?: number
   name: string
   description: string
+  created_at: string
 }
 
 export type School = {
-  id: number
+  id?: number
   name: string
   start_time: string
   end_time: string
   achievements: Achievement[]
+  created_at: string
+  updated_at: string
 }
 
 export enum Align {
