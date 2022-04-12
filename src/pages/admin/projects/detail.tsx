@@ -5,7 +5,7 @@ import Table from '../../../components/Table';
 import { Align, Column, Description } from '../../../types/index';
 import '../../../assets/styles/pages/admin/project/index.less';
 import usePublicStore from "../../../store/index"
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
 import ApiClient from '../../../library/ApiClient';
@@ -53,6 +53,8 @@ function ProjectDetailAdminPage() {
     },
   ];
 
+  const navigation = useNavigate();
+
   const handleAdd = async () => {
     if (name === "") {
       AddToast('Error', 'Name không được để trống', 'toast');
@@ -99,6 +101,7 @@ function ProjectDetailAdminPage() {
         updated_at: new Date().toLocaleDateString(),
       });
       AddToast('Success', 'Update project thành công!', 'toast');
+      navigation("/admin/projects")
     } catch (error) {
       AddToast('Error', 'Update project không thành công!', 'toast');
       return error;

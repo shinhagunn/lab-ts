@@ -188,7 +188,7 @@ function UserDetailAdminPage() {
 
   return (
     <div>
-      <LayoutAdmin selected={5} pageName="Users">
+      <LayoutAdmin selected={2} pageName="Users">
         <div className="main">
           <BlockAdmin className="skills" blockName="Add Favorite">
             <div className="container row flex justify-between items-end">

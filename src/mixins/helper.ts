@@ -5,7 +5,7 @@ export function CurrencyHTML(number: number | undefined) {
 
 export function changeISOTimeToMyFormTime(time: string) {
   const date = new Date(time).getDate() < 10 ? `0${new Date(time).getDate()}` : `${new Date(time).getDate()}`;
-  const month = new Date(time).getMonth() < 10 ? `0${new Date(time).getMonth() + 1}` : `${new Date(time).getMonth() + 1}`;
+  const month = new Date(time).getMonth() + 1 < 10 ? `0${new Date(time).getMonth() + 1}` : `${new Date(time).getMonth() + 1}`;
   return `${new Date(time).getFullYear()}-${month}-${date}`;
 }
 

@@ -48,8 +48,8 @@ function Table<T>(props: TableProps<T>) {
 
   const changeISOTimeToMyFormTime = (time: string) => {
     const date = new Date(time).getDate() < 10 ? `0${new Date(time).getDate()}` : `${new Date(time).getDate()}`;
-    const month = new Date(time).getMonth() < 10 ? `0${new Date(time).getMonth() + 1}` : `${new Date(time).getMonth() + 1}`;
-    return `${new Date(time).getFullYear()}-${month}-${date}`;
+  const month = new Date(time).getMonth() + 1 < 10 ? `0${new Date(time).getMonth() + 1}` : `${new Date(time).getMonth() + 1}`;
+  return `${new Date(time).getFullYear()}-${month}-${date}`;
   };
 
   const handleRemove = async (e: any, row: any, index: number) => {

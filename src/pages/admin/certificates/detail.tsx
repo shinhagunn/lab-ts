@@ -20,6 +20,8 @@ function CertificateDetailAdminPage() {
   const { id } = useParams();
 
   const publicStore = usePublicStore()
+  
+  const navigation = useNavigate();
 
   const handleUpdate = async () => {
     if (name === "") {
@@ -39,6 +41,7 @@ function CertificateDetailAdminPage() {
         updated_at: new Date().toLocaleDateString(),
       });
       AddToast('Success', 'Update certificate thành công!', 'toast');
+      navigation("/admin/certificates")
     } catch (error) {
       AddToast('Error', 'Update certificate không thành công!', 'toast');
       return error;

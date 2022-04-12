@@ -21,6 +21,8 @@ function SkillDetailAdminPage() {
 
   const publicStore = usePublicStore()
 
+  const navigation = useNavigate();
+
   const handleUpdate = async () => {
     if (name === "") {
       AddToast("Error","Bạn phải nhập tên", "toast");
@@ -44,6 +46,7 @@ function SkillDetailAdminPage() {
         updated_at: new Date().toLocaleDateString(),
       });
       AddToast('Success', 'Update skill thành công!', 'toast');
+      navigation("/admin/skills")
     } catch (error) {
       AddToast('Error', 'Update skill không thành công!', 'toast');
       return error;

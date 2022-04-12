@@ -73,6 +73,7 @@ function UserAdminPage() {
     try {
       await new ApiClient().post('/schools', {
         name,
+        achievements: [],
         start_time: new Date(startTime).toISOString(),
         end_time: new Date(endTime).toISOString(),
         created_at: new Date().toISOString(),
