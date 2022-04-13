@@ -147,7 +147,7 @@ function UserDetailAdminPage() {
         facebook,
         job,
         avatar,
-        updated_at: new Date().toLocaleDateString(),
+        updated_at: new Date().toISOString(),
       });
       AddToast('Success', 'Update user thành công!', 'toast');
     } catch (error) {

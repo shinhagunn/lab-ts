@@ -105,7 +105,7 @@ function SchoolDetailAdminPage() {
         name,
         start_time: new Date(startTime).toISOString(), 
         end_time: new Date(endTime).toISOString(),
-        updated_at: new Date().toLocaleDateString(),
+        updated_at:  new Date().toISOString(),
       });
       AddToast('Success', 'Update school thành công!', 'toast');
       navigation("/admin/schools")

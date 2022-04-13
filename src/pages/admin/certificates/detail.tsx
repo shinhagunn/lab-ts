@@ -38,7 +38,7 @@ function CertificateDetailAdminPage() {
       await new ApiClient().patch(`/certificates/${id}`, {
         name,
         year, 
-        updated_at: new Date().toLocaleDateString(),
+        updated_at:  new Date().toISOString(),
       });
       AddToast('Success', 'Update certificate thành công!', 'toast');
       navigation("/admin/certificates")

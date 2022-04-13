@@ -43,7 +43,7 @@ function SkillDetailAdminPage() {
       await new ApiClient().patch(`/skills/${id}`, {
         name,
         score: Number(score), 
-        updated_at: new Date().toLocaleDateString(),
+        updated_at:  new Date().toISOString(),
       });
       AddToast('Success', 'Update skill thành công!', 'toast');
       navigation("/admin/skills")
